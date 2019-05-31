@@ -26,3 +26,8 @@ width: 150px;
 	display: none;
 font-weight:bold
 }
+.end h1{
+	color: #f30;
+	text-align: center; 
+	margin-top: 20%
+}
