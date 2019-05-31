@@ -1,28 +1,18 @@
 .led{
 
- width: 150px;
-
- /*width: 150px;*/
-
-height: 100px;
-- background: #000;
-
+width: 150px;
+/*width: 150px;*/
+ height: 100px;
+ background: #000;
  background: #eee;
-
  margin: 15px 0;
-
  padding: 20px;
-
  font-size: 3em;
-
  font-family: monospace;
-
 }
 
 .NumButtons {
 
-width: 150px;
-
+ width: 150px;
  width: 300px;
-
 }
