@@ -81,3 +81,20 @@ td{
 .round-style1 p{
 	margin-top: 40px
 }
+table{
+	margin-left: 80%; margin-top: -500px
+}
+.tr{
+	color: red;
+	font-weight:bold
+}
+.start{
+	background: rgba(0,0,0,0.95);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	font-weight:bold
+}
