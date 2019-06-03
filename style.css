@@ -52,3 +52,32 @@ body{
 td{
 	border: 1px solid black; font-size: 25px; background: #fff
 } 
+.round-style{
+	background: #0FF;
+	border: 1px solid black;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+}
+.round-style1{
+	margin-left: 38%
+}
+.round-style2{
+	margin-left: 45%;
+	margin-top: -100px
+}
+.round-style3{
+	margin-left: 52%;
+	margin-top: -100px
+}
+.round-style4{
+	margin-left: 59%;
+	margin-top: -100px
+}
+.round-style p{
+	margin-top: 30px
+}
+.round-style1 p{
+	margin-top: 40px
+}
