@@ -53,3 +53,67 @@ font-weight:bold
 #startGame{
 	margin-left: 47%
 }
+#timer_inp{
+	background: khaki;
+	width: 100px;
+	height: 60px;
+	border: 2px solid black;
+	border-radius: 10%;
+	text-align: center;
+	font-size: 50px;
+	font-weight:bold;
+	margin-left: 48%;
+	margin-bottom: 20px
+}
+body{
+	background: #69f
+}
+td{
+	border: 1px solid black; font-size: 25px; background: #fff
+} 
+.round-style{
+	background: #0FF;
+	border: 1px solid black;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+}
+.round-style1{
+	margin-left: 38%
+}
+.round-style2{
+	margin-left: 45%;
+	margin-top: -100px
+}
+.round-style3{
+	margin-left: 52%;
+	margin-top: -100px
+}
+.round-style4{
+	margin-left: 59%;
+	margin-top: -100px
+}
+.round-style p{
+	margin-top: 30px
+}
+.round-style1 p{
+	margin-top: 40px
+}
+table{
+	margin-left: 80%; margin-top: -500px
+}
+.tr{
+	color: red;
+	font-weight:bold
+}
+.start{
+	background: rgba(0,0,0,0.95);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	font-weight:bold
+}
