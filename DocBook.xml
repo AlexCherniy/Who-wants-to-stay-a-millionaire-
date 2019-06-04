@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/sch/docbook.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<article xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1">
+    <info>
+        <title>Документация к проекту "Кто хочет стать миллионером?"</title>
+        <author>
+            <orgname>Алексей Черненков</orgname>
+        </author>
+    </info>
+    
+    <section>
+        <title>Документация</title>
+        <section>
+            <title>Немного о проекте</title>
+        <para>"Кто хочет стать миллионером?" — это игра по одноименному названию телепередачи.
+                Первый выпуск телепередачи вышел на экраны 1 октрября  1999 года. Одно из самых
+                успешных телешоу в мире.</para>
+        <para>Игра доступна онлайн по данной <link
+                    xlink:href="https://github.com/AlexCherniy/Who-wants-to-stay-a-millionaire-">
+                    ссылке</link>.</para>
+        </section>
+    </section>
+    <section>
+        
+        <title>Описание игры</title>
+ 
+    <section>
+            <title>Об игре</title>
+            <para>Who wants to be a miliionaire? (рус. Кто хочет стать миллионером?) — онлайн игра,
+                которая повзволяет почувствовать себя настоящим участником телепрограммы. </para>
+    </section>
+    <section>
+        <title>Принцип игры</title>
+        <para>Цель игры состоит в том, чтобы получить как можно больше очков, отвечая на
+                поставленные вопросы. Игра состоит из 15 вопросов. Уровень сложности и шансы
+                получить деньги увеличиваются с каждым новым вопросом. Например, при ответе на
+                первый блок вопросов Ваш призовой фонд составит от 100 до 1000 рублей. Играйте,
+                правильно отвечайте на вопросы в процессе игры – и призовой фонд будет увеличиваться
+                на глазах, пока Вы не дойдете до финального вопроса, и если Вы ответите на него
+                правильно, то станете счастливым обладателем миллиона рублей!</para>
+    </section>
+    </section>
+    <section>
+        <title>Иллюстрации</title>
+        <orderedlist>
+            <listitem>
+                <para>
+                    <emphasis>Старт</emphasis>
+                </para>
+                <para>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata align="center" scale="100" fileref="images/1.png"/>
+                        </imageobject>
+                    </mediaobject>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <emphasis>Игровой процесс</emphasis>
+                </para>
+                <para>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata align="center" scale="100" fileref="images/2.png"/>
+                        </imageobject>
+                    </mediaobject>
+                </para>
+            </listitem>
+        </orderedlist>
+    </section>
+    
+    <section>
+        <title>Детали реализации</title>
+        <para>Особенности реализации отдельного функционала представлены ниже:</para>
+        <section>
+            <title>Верификация </title>
+            <para>Данная функция вызывается при старте.</para>
+            <programlisting>
+                if (username != null) 
+{   
+    $('.start').css('display', 'none');
+    $('.reStart').css('display', 'block');
+    $('.hellow').text('С возвращением, ' + username + '!');
+
+    $('#startGame').click(function(){
+    
+        $('.reStart').css('display', 'none');
+        setTimeout(timer,1000);
+
+    });
+}
+
+            </programlisting>
+        </section>
+
+    
+    <section>
+            <title>Проверка ответа</title>
+            <para>Функция вызывается когда требуется проверка на правильный ответ. Если ответ
+                верный, то запускается следующий вопрос. Если не верный-то конец игры</para>
+            <programlisting>
+                if( $('input[name=answer]:checked').val() == key[level] ){
+        level++;
+        show(level);
+        }
+        else{gameOwer()}
+	
+        $('input').prop('checked', false);
+        $(tr.css('background','#fff'));
+        $(tr.removeClass('result'));
+        $(tr[tr.length - (level + 1)]).css('background','#FF0');
+        $(tr[tr.length - (level)]).css('color','#f0f');
+        $(tr[tr.length - (level)]).addClass('result');
+        $('label').css('color', '#555');
+
+	if (level == 5 || level == 10 || level == 15){
+	    resultConst.push($(tr[tr.length - (level)]).addClass('resultConst'));
+	}
+            </programlisting>
+        
+    </section>
+    
+    <section>
+            <title>Неправильный ответ.</title>
+            <para>Функция вызывается каждый раз если пользователь отвечает неправильно на
+                вопрос.</para>
+            <programlisting>
+                <![CDATA[
+    function shootLaser() {
+        if (ship.canShoot && ship.lasers.length < LASER_MAX) {
+            ship.lasers.push({
+                x: ship.x + 4 / 3 * ship.r * Math.cos(ship.a),
+                y: ship.y - 4 / 3 * ship.r * Math.sin(ship.a),
+                xv: LASER_SPEED * Math.cos(ship.a) / FPS,
+                yv: -LASER_SPEED * Math.sin(ship.a) / FPS,
+                dist: 0,
+                explodeTime: 0
+            });
+        }
+        ship.canShoot = false;
+    }
+                ]]>
+            </programlisting>
+        
+    </section>
+    </section>
+</article>
