@@ -137,10 +137,10 @@ $('.roundEnd').click(function(){
      end();
 })
 
-
-
-
-
+/**
+* Функция которая выполняет действие при не правильном ответе игрока 
+* Функция ни принимает не какой переменной и ничего не возвращает
+*/
 function end() {
 
         $('.end').css('display', 'block');
@@ -152,11 +152,30 @@ function end() {
         }
 }
 
+/**
+* Функция которая выполняет действие при ответе игроком на все вопросы
+* Не принимает переменных и выводит текст в форму выиграша
+*/
+/**
+*@var tdResult1 вывод результата
+*/
+/**
+*@var tdText1 вывод текст
+*/
+function gameOwer() {
 
+        $('.end').css('display', 'block');
 
-
-
-
+        if (tr.hasClass('resultConst')){
+	        var tdResult1 = $(resultConst[resultConst.length - 1]).children();
+	        var tdText1 = tdResult1[1].textContent;
+	        $('.showResult').text('ВЫ ВЫИГРАЛИ: ' + tdText1 + ' гривень');
+        }
+}
+/**
+* Функция которая устанавливает лимит по времени
+* и следит за его исполнением.
+*/
 function timer(){
 
         var objTimer=document.getElementById('timer_inp');
@@ -196,7 +215,7 @@ $('#start').click(function(){
         createCookie(name, value, 1);
 });
 
-**
+/**
 * Функция создает кук с базовыми параметрами 
 * Принимает переменные имени даты и значения
 */
