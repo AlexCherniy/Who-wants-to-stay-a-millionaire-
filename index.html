@@ -5,7 +5,6 @@
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
 
 <div id="timer_inp">60</div>
@@ -15,59 +14,17 @@
 	<div class="round round-style round-style3"><p>ЗВОНОК ДРУГУ</p></div>
 	<div class="roundEnd round-style round-style4"><p>ЗАКОНЧИТЬ ИГРУ</p></div>
 
-<div class="wrapper container">
-<div class="row justify-content-center">
- <div class="led">
-<div class=" col led">
-
-
-</div>
-
-</div>
-
-<div class="container NumButtons">
-
-<div class="row">
- <button class="numButton col-sm-4">9</button>
- <button class="numButton col-sm-4 ">8</button>
- <button class="numButton col-sm-4">7</button>
- <button class="numButton col-sm-3">9</button>
- <button class="numButton col-sm-3">8</button>
- <button class="numButton col-sm-3">7</button>
- <button class="opButton col-sm-3">-</button>
- 
-</div>
-
-<div class="row">
- <button class="numButton col-sm-4">6</button>
- <button class="numButton col-sm-4">5</button>
- <button class="numButton col-sm-4">4</button>
- <button class="numButton col-sm-3">6</button>
- <button class="numButton col-sm-3">5</button>
- <button class="numButton col-sm-3">4</button>
- <button class="opButton col-sm-3">+</button>
-</div>
-
-<div class="row">
- <button class="numButton col-sm-4">3</button>
- <button class="numButton col-sm-4">2</button>
- <button class="numButton col-sm-4">1</button>
- <button class="numButton col-sm-3">3</button>
- <button class="numButton col-sm-3">2</button>
- <button class="numButton col-sm-3">1</button>
- <button class="opButton col-sm-3">*</button>
-</div>
-
-<div class="row">
- <button class="numButton col-sm-4">0</button>
- <button class="numButton col-sm-4">.</button>
- <button class="numButton col-sm-3">0</button>
- <button class="numButton col-sm-3">.</button>
- <button class="numButton col-sm-3">/</button>
- <button class="opButton col-sm-3">=</button>
-</div>
-</div>
-</div>
+	
+<h3 class="question"></h3>
+	<input class="answer-input" type="radio" name="answer" id="answer1" value="0">
+	<label for="answer1" class="answer-label"></label><br>
+	<input class="answer-input" type="radio" name="answer" id="answer2" value="1">
+	<label for="answer2" class="answer-label"></label><br>
+	<input class="answer-input" type="radio" name="answer" id="answer3" value="2">
+	<label for="answer3" class="answer-label"></label><br>
+	<input class="answer-input" type="radio" name="answer" id="answer4" value="3">
+	<label for="answer4" class="answer-label"></label><br>
+	<input type="button" class="btn" value="ПОДТВЕРДИТЬ">
 <table>
 	  <tr class="tr">
 	    <td>15</td><td>1 000 000</td>
@@ -115,10 +72,24 @@
 	    <td>1</td><td>100</td>
 	  </tr>
 	</table>
+	
+	<div class="start">
+	<form action="">
+		<input type="text" id="user" name="user" required placeholder="Введите Ваше имя">
+		<input type="submit" id="start">
+	</form>
+	</div>
+	
 	<div class="end">
 		<h1>ИГРА ОКОНЧЕНА</h1>
 		<h3 class="showResult">ВЫ ПРОИГРАЛИ </h3>
 	</div>
+	
+	<div class="reStart">
+		<h1 class="hellow"></h1>
+		<button id="startGame">НАЧАТЬ ИГРУ</button>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="script.js"></script>
 </body>
-
 </html>
